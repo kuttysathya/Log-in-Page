@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+:root{
+    --mainColor: #b687da;
+    --whiteColor:#fff;
+    --titleColor:#333;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    background-image: url(background.jpg);
+    background-position: center;
+    font-weight: 400;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.wrapper{
+    position: relative;
+    width: 30rem;
+    height: 34rem;   
+    background: transparent;
+    border: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(min-width: 550px) {
+    .wrapper{
+        width: 40rem;
+    }
+}
+
+.wrapper .form-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--whiteColor);
+    border-radius: .5rem;
+    box-shadow: 2px;
+}
+
+.wrapper .form-container form h2{
+    font-size: 3rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+.wrapper .form-container form .form-group{
+    position: relative;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.wrapper .form-container form .form-group span,
+.wrapper .form-container form .form-group label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    padding: 0 .5rem;
+    transition: all .5s ease;
+    color: #921dec;
+}
+
+.wrapper .form-container form .form-group span{
+    left: .5rem;
+}
+
+.wrapper .form-container form .form-group label{
+    left: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.wrapper .form-container form .form-group input{
+    width: 100%;
+    height: 3rem;
+    padding: 0.1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    border: .1rem solid var(--mainColor);
+    font-size: 1.2rem;
+    color: var(--titleColor);
+}
+
+form .form-group input:focus~label,
+form .form-group input:valid~label,
+form .form-group input:focus~span,
+form .form-group input:valid~span{
+    top: 0 !important;
+    font-size: 1.2rem !important;
+    background-color: var(--whiteColor);
+}
+
+
+.wrapper .form-container form .forgot-pwd{
+    font-size: 1.1rem;
+    margin: -1.5rem 0 1.5rem;
+    padding: .5rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper .form-container form .forgot-pwd input{
+    accent-color: #921dec;
+    margin-right: .3rem;
+} 
+
+.wrapper .form-container form .forgot-pwd a{
+    color:#600ca0;
+    text-decoration: none;
+    text-transform: capitalize;
+    transform: all .5s ease;
+}
+
+.wrapper .form-container form .forgot-pwd a:hover{
+    color: #333;
+    text-decoration: underline;
+}
+
+.wrapper .form-container form .btn{
+    background: #921dec;
+    color: var(--whiteColor);
+    text-transform: capitalize;
+    width: 100%;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    box-shadow: 2px rgb(from 0 0 0 / .3);
+}
+
+.wrapper .form-container form .link{
+    text-align: center;
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all .5s ease;
+    padding: 15px;
+}
+
+.wrapper .form-container form .link a{
+    text-decoration: none;
+}
+
+.wrapper .form-container form .link a:hover{
+    text-decoration: underline;
+}
+
+
+.active .form-container.login{
+    transform: translateX(15rem);
+    opacity: 0;
+    pointer-events: none;
+} 
+.active .form-container.Register{
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: initial;
+}
+
+
+
+
+
+
+
+ 
